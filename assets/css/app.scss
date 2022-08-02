@@ -1,5 +1,4 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import "../../../node_modules/highlightjs/styles/github.css";
 
 
 // @font-face {
@@ -29,6 +28,7 @@ body.special-event {
   h1, h2, h3 {
     font: $hodlween;
     font-size: 2em;
+    color: $light2;
   }
   h2 {
     font-size: 3.5em;
@@ -60,8 +60,21 @@ a:hover {
 }
 
 .navbar-dark {
+  margin: -28px auto;
+  width: 100%;
+  top: 22px;
+  padding: 6px 0 0;
   .navbar-nav {
-    background-color: $dark;
+    background-color: rgba(17,5,29,.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 0 17px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .navbar-toggler {
+    padding: 5px 12px 6px;
+    margin: 9px 19px;
+    background-color: rgba(17,5,29,.5);
   }
 }
 #wrapper {
@@ -126,6 +139,7 @@ a.orange-pill-btn {
     color: $dark;
   }
 }
+
 .highlight-section, .highlight-section2 {
   p {
     line-height: 2;
@@ -134,17 +148,20 @@ a.orange-pill-btn {
   }
 }
 .highlight-section {
-  padding: 100px 0 150px;
+  padding: 100px 0 50px;
   margin: auto;
   clear: both;
 }
 .highlight-section2 {
-  margin: 60px auto 0;
+  margin: 50px auto 150px;
   .hodlween-font {
     font: $hodlween;
     font-size: 37px;
     line-height: 1;
   }
+}
+.highlight-section3 {
+  margin: 100px auto 150px;
 }
 
 .ticket-price-increase { 
@@ -189,18 +206,30 @@ article {
     -moz-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
     display: block;
   }
-  h2, p {
+  
+  h2, p, .buy-links {
     text-align: left;
     padding-left: 600px;
-    line-height: 2;
   }
   h2 {
     color: $light;
-
+  }
+  p {
+    line-height: 2;
+  }
+  .buy-links {
+    list-style: none;
+    .buy-link {
+      font-size: .9em;
+      line-height: 2.5;
+    }
+    .orange-pill-btn {
+      margin-left: -14px;
+      text-align: center;
+    }
   }
 }
-
-article:nth-child(even) {
+article:nth-child(odd) {
   img {
     float: right;
     box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
@@ -268,14 +297,13 @@ small {
     color: #888;
 }
 
-main.container, footer.container {
-    max-width: 900px;
+nav, main.container, footer .container {
+    max-width: 1375px;
 }
 
-footer.container {
-    margin-top: 30px;
-    padding: 30px 0;
-    border-top: 1px dashed #aaa;
+footer .container {
+    padding: 50px 0 100px;
+    opacity: .8;
 }
 
 @media (max-width: 1300px) {
@@ -289,7 +317,8 @@ footer.container {
         font-size: 2em;
       }
       h2 {
-        font-size: 3.5em;
+        font-size: 10vw;
+        line-height: 1;
       }
       .header {
           margin: 0 auto;
@@ -345,7 +374,7 @@ footer.container {
       height: 49px;
       width: 163px;
       margin: 12px auto 0;
-      line-height: 1.7;
+      line-height: 1.8;
     }
     .highlight-section, .highlight-section2 {
       p {
@@ -357,34 +386,51 @@ footer.container {
       padding: 13vw 0 3vw;
     }
     .highlight-section2 {
-      margin: 60px auto 0;
-      .hodlween-font {
-        font-size: 37px;
-        line-height: 1;
-      }
+      margin: 10vw auto 0;
+    }
+    .highlight-section3 {
+      margin: 15vw auto 20vw
     }
     .ticket-price-increase { 
       margin: 0 0 17vw;
       > span{
-        font-size: 8vw;
+        font-size: 7vw;
       }
     }
     #countdown-ticker {
       div {
         margin: 20px 3vw 0;
         span:first-child {
-          font-size: 24vw;
+          font-size: 22vw;
           margin-bottom: 9vw;
         }
         span:last-child {
-          font-size: 6vw;
+          font-size: 5vw;
         }
       }
     }
-
-    .sidebar {
-        padding-top: 30px;
+    article {
+      padding: 0 0 70px;
+      float: none;
+      img {
+        width: 90%;
+        margin: auto;
+        margin: 0 17px 10px;
+      }
+      h2, p, .buy-links {
+        padding: 0 15px;
+      }
     }
+    article:nth-child(odd) {
+      float: none;
+      img {
+        // float: none;
+      }
+      h2, p, .buy-links {
+        padding: 0 15px;
+      }
+    }
+
     main {
       .responsive-embed {
         max-width: 90%;
