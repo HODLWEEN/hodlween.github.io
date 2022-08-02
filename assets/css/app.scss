@@ -1,0 +1,401 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/highlightjs/styles/github.css";
+
+
+// @font-face {
+//    font-family: "Charter";
+//    src: url('/assets/fonts/charter.ttc');
+// }
+@font-face {
+   font-family: "Blood Crow C";
+   src: url('/assets/fonts/bloodcrowc.ttf');
+}
+$hodlween: 400 1rem 'Blood Crow C', Arial, Helvetica, sans-serif;
+$sans-serif: 100 1rem Helvetica, Arial, sans-serif;
+
+$light: #e4d6e2;
+$light2: #d7c9d4;
+$light3: #b8acc3; //text
+$light4: #786e82;
+$dark: #11051d; //bg
+$dark2: #0a0311; //footer
+$purple: #230444; //gradient
+$orange: #eb7e6f; //links
+
+body.special-event {
+  background: #11051d url(/assets/img/repeat-bg.jpg) repeat-x top center;
+  background-size: 10px 1488px;
+  color: $light3;
+  h1, h2, h3 {
+    font: $hodlween;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
+  .header {
+      margin: 0 auto;
+    img {
+      max-height: 800px;
+      width: 100%;
+      max-width: 800px;
+      display: block;
+    }
+  }
+  main {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+a {
+  color: $orange;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: $light;
+}
+a:hover {
+  transition: all 0.3s;
+}
+
+.navbar-dark {
+  .navbar-nav {
+    background-color: $dark;
+  }
+}
+#wrapper {
+  background: url(/assets/img/hdr-bg.jpg) no-repeat top center;
+  background-size: 1728px 1488px;
+  min-height:1488px;
+}
+#hodlween-logo {
+  width: 680px;
+  height: 200px;
+  display: block;
+  margin: 207px auto 180px;
+}
+.header {
+  text-align: center;
+  margin: auto;
+  #scribble-party {
+    background: url(/assets/img/scribble.png) no-repeat;
+    background-size: 230px 100px;
+    display: block;
+    width: 230px;
+    height: 100px;
+    position: relative;
+    margin: -55px auto 0;
+    bottom: -55px;
+    right: -163px;
+  }
+  span {
+    font: $hodlween;
+    line-height: 1.1;
+    &.headline {
+      color: $light;
+      font-size: 55px;
+    }
+    &.headline2 {
+      color: $light2;
+      font-size: 40px;
+    }
+  }
+  .white-divider {
+    background: rgb(228,214,226);
+    background: linear-gradient(90deg, rgba(228,214,226,0) 0%, rgba(228,214,226,1) 50%, rgba(228,214,226,0) 100%);
+    height: 1px;
+    display: block;
+    width: 850px;
+    margin: 20px auto 10px;
+  }
+}
+
+a.orange-pill-btn {
+  background: url(/assets/img/orange-pill.png) no-repeat center center;
+  background-size: 192px 58px;
+  font: $hodlween;
+  font-size: 30px;
+  color: white;
+  height: 58px;
+  display: block;
+  width: 192px;
+  margin: 20px auto 0;
+  line-height: 1.7;
+  &:hover, &:focus {
+    color: $dark;
+  }
+}
+.highlight-section, .highlight-section2 {
+  p {
+    line-height: 2;
+    width: 650px;
+    margin: auto;
+  }
+}
+.highlight-section {
+  padding: 100px 0 150px;
+  margin: auto;
+  clear: both;
+}
+.highlight-section2 {
+  margin: 60px auto 0;
+  .hodlween-font {
+    font: $hodlween;
+    font-size: 37px;
+    line-height: 1;
+  }
+}
+
+.ticket-price-increase { 
+  margin: 1px 0;
+  > span{
+    font: $hodlween;
+    font-size: 46px;
+    color: $light3;
+  }
+}
+#countdown-ticker {
+  div {
+    display: inline-block;
+    font: $hodlween;
+    margin: 20px 32px 0px;
+    span {
+      display: block;
+    }
+    span:first-child {
+      color: $light;
+      font-size: 110px;
+      line-height: 0;
+      margin-bottom: 46px;
+    }
+    span:last-child {
+      color: $light4;
+      font-size: 30px;
+    }
+  }
+}
+
+article {
+  clear: both;
+  padding: 0 0 170px;
+  float: left;
+  img {
+    float: left;
+    width: 550px;
+    display: inline-block;
+    box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
+    -webkit-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
+    -moz-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
+    display: block;
+  }
+  h2, p {
+    text-align: left;
+    padding-left: 600px;
+    line-height: 2;
+  }
+  h2 {
+    color: $light;
+
+  }
+}
+
+article:nth-child(even) {
+  img {
+    float: right;
+    box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
+    -webkit-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
+    -moz-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
+  }
+  h2, p {
+    text-align: right;
+    padding-right: 600px;
+    padding-left: 0px;
+  }
+}
+
+footer {
+  background-color: $dark2;
+  .col {
+    text-align: center;
+  }
+  
+  .footer-nav {
+    padding: 0;
+    // margin: 0 0 4px;
+    li {
+      list-style: none;
+    }
+    a {
+      font-size: 1em;
+      color: white;
+      text-decoration: underline;
+      &:hover {
+          // opacity: 1;
+          text-decoration: none;
+      }
+    }
+    small {
+      color: #dedede !important;
+      a {
+        color: #dedede !important;
+      }
+    }
+  }
+}
+
+.responsive-embed {
+  position: relative;
+  padding-bottom: 39.32%;
+  height: 0;
+  overflow: hidden;
+  max-width: 70%;
+  margin: auto;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// -- Stock code below -- 
+
+small {
+    display: block;
+    color: #888;
+}
+
+main.container, footer.container {
+    max-width: 900px;
+}
+
+footer.container {
+    margin-top: 30px;
+    padding: 30px 0;
+    border-top: 1px dashed #aaa;
+}
+
+@media (max-width: 1300px) {
+
+
+}
+
+@media (max-width: 767px) {
+    body.special-event {
+      h1, h2, h3 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 3.5em;
+      }
+      .header {
+          margin: 0 auto;
+        img {
+          max-height: 800px;
+          width: 100%;
+          max-width: 800px;
+        }
+      }
+      main {
+        margin: 0 auto;
+        font-size: 1em;
+      }
+    }
+
+    #wrapper {
+      background-size: 240% auto;
+    }
+    #hodlween-logo {
+      width: 100%;
+      height: 28vw;
+      margin: 29vw auto 21vw;
+    }
+    .header {
+      #scribble-party {
+        background: url(/assets/img/scribble.png) no-repeat;
+        background-size: 230px 100px;
+        display: block;
+        width: 230px;
+        height: 100px;
+        position: relative;
+        margin: -55px auto 0;
+        bottom: -55px;
+        right: -163px;
+      }
+      span {
+        line-height: 1.1;
+        &.headline {
+          font-size: 9vw;
+        }
+        &.headline2 {
+          font-size: 7vw;
+        }
+      }
+      .white-divider {
+        width: 100%;
+        margin: 10px auto 6px;
+      }
+    }
+    a.orange-pill-btn {
+      background-size: 163px 49px;
+      font-size: 26px;
+      height: 49px;
+      width: 163px;
+      margin: 12px auto 0;
+      line-height: 1.7;
+    }
+    .highlight-section, .highlight-section2 {
+      p {
+        line-height: 1.6;
+        width: 100%;
+      }
+    }
+    .highlight-section {
+      padding: 13vw 0 3vw;
+    }
+    .highlight-section2 {
+      margin: 60px auto 0;
+      .hodlween-font {
+        font-size: 37px;
+        line-height: 1;
+      }
+    }
+    .ticket-price-increase { 
+      margin: 0 0 17vw;
+      > span{
+        font-size: 8vw;
+      }
+    }
+    #countdown-ticker {
+      div {
+        margin: 20px 3vw 0;
+        span:first-child {
+          font-size: 24vw;
+          margin-bottom: 9vw;
+        }
+        span:last-child {
+          font-size: 6vw;
+        }
+      }
+    }
+
+    .sidebar {
+        padding-top: 30px;
+    }
+    main {
+      .responsive-embed {
+        max-width: 90%;
+        padding-bottom: 50.7%;
+      }
+    }
+    .white-divider { 
+      width: 100%;
+    }
+}
+
+body > main.container {
+    padding: 80px 15px 0; /* 80px to make the container go all the way to the bottom of the topbar */
+}
