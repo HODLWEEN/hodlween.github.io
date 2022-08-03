@@ -21,6 +21,10 @@ $dark2: #0a0311; //footer
 $purple: #230444; //gradient
 $orange: #eb7e6f; //links
 
+$table-color1: #1d1027;
+$table-color2: #22122e;
+$table-color3: #1c122e;
+
 body.special-event {
   background: #11051d url(/assets/img/repeat-bg.jpg) repeat-x top center;
   background-size: 10px 1488px;
@@ -28,10 +32,14 @@ body.special-event {
   h1, h2, h3 {
     font: $hodlween;
     font-size: 2em;
-    color: $light2;
+    color: $light;
   }
   h2 {
     font-size: 3.5em;
+    line-height: .9;
+  }
+  h3 {
+    font-size: 3em;
   }
   .header {
       margin: 0 auto;
@@ -45,7 +53,7 @@ body.special-event {
   main {
     margin: 0 auto;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
 }
 a {
@@ -114,14 +122,18 @@ a:hover {
       font-size: 40px;
     }
   }
-  .white-divider {
-    background: rgb(228,214,226);
-    background: linear-gradient(90deg, rgba(228,214,226,0) 0%, rgba(228,214,226,1) 50%, rgba(228,214,226,0) 100%);
-    height: 1px;
-    display: block;
-    width: 850px;
-    margin: 20px auto 10px;
-  }
+}
+
+.white-divider-mid {
+  background: rgb(228,214,226);
+  background: linear-gradient(90deg, rgba(228,214,226,0) 0%, rgba(228,214,226,1) 50%, rgba(228,214,226,0) 100%);
+  height: 1px;
+  display: block;
+  width: 850px;
+  margin: 20px auto 10px;
+}
+main .white-divider-mid {
+  margin-bottom: 30px;
 }
 
 a.orange-pill-btn {
@@ -140,7 +152,12 @@ a.orange-pill-btn {
   }
 }
 
-.highlight-section, .highlight-section2 {
+
+.highlight-section,
+.highlight-section2,
+.highlight-section3,
+.highlight-section4,
+.highlight-section5 {
   p {
     line-height: 2;
     width: 650px;
@@ -153,15 +170,25 @@ a.orange-pill-btn {
   clear: both;
 }
 .highlight-section2 {
-  margin: 50px auto 150px;
-  .hodlween-font {
-    font: $hodlween;
-    font-size: 37px;
-    line-height: 1;
-  }
+  padding: 50px 0 150px;
 }
 .highlight-section3 {
-  margin: 100px auto 150px;
+  padding: 100px 0 150px;
+}
+.highlight-section4 {
+  padding: 50px 0 50px;
+}
+.highlight-section5 {
+  padding: 100px 0 100px;
+}
+
+.hodlween-font {
+  font: $hodlween;
+  font-size: 37px;
+  line-height: 1 !important;
+  span {
+    clear: both;
+  }
 }
 
 .ticket-price-increase { 
@@ -206,10 +233,22 @@ article {
     -moz-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
     display: block;
   }
-  
-  h2, p, .buy-links {
+  h2, p, .buy-links, .details, .white-divider {
     text-align: left;
     padding-left: 600px;
+  }
+  .white-divider div{
+    background: rgb(228,214,226);
+    background: linear-gradient(90deg, rgba(228,214,226,1) 0%, rgba(228,214,226,0) 100%);
+    height: 1px;
+    display: block;
+    margin: 25px 0 0;
+  }
+  .details div {
+    line-height: 2;
+    padding: 15px 0px;
+    font-size: 1em;
+    font-weight: bold;
   }
   h2 {
     color: $light;
@@ -217,10 +256,17 @@ article {
   p {
     line-height: 2;
   }
+  .price {
+    font: $sans-serif;
+    font-size: 1.5em;
+    color: $light2;
+    margin: 20px 0;
+    display: block;
+  }
   .buy-links {
     list-style: none;
     .buy-link {
-      font-size: .9em;
+      font-size: 1em;
       line-height: 2.5;
     }
     .orange-pill-btn {
@@ -229,17 +275,107 @@ article {
     }
   }
 }
-article:nth-child(odd) {
+.col article:nth-child(odd) {
   img {
     float: right;
     box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
     -webkit-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
     -moz-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
   }
-  h2, p {
+  h2, p, .buy-links, .details, .white-divider {
     text-align: right;
     padding-right: 600px;
     padding-left: 0px;
+  }
+  .white-divider div{
+    background: linear-gradient(90deg, rgba(228,214,226,0) 0%, rgba(228,214,226,1) 100%);
+  }
+  .details div {
+    // margin-right: -25px;
+  }
+  .buy-links {
+    .orange-pill-btn {
+      margin-right: -14px;
+      margin-left: 0;
+      display: inline-block;
+    }
+  }
+}
+
+.speakers {
+  div > a {
+    display: block;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .pic-caption {
+    a {
+      font: $hodlween;
+      font-size: 2em;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.table {
+  border-collapse: separate;
+  &.table-dark {
+    color: $light3;
+    background-color: $dark;
+  }
+  &.table-bordered td,
+  &.table-dark th {
+    border-color: $dark;
+  }
+  th, td {
+    vertical-align: middle;
+  }
+  thead {
+    th {
+      background-color: $table-color1;
+    }
+    th:nth-child(2) {
+      background-color: $table-color2;
+      width: 40%;
+    }
+    th:nth-child(3) {
+      background-color: $table-color3;
+      width: 40%;
+    }
+  }
+  tbody {
+    tr:nth-child(1), tr:nth-child(6), tr:nth-child(10), tr:nth-child(14) {
+      background-color: $table-color1;
+    }
+    tr:nth-child(2), tr:nth-child(3), tr:nth-child(15), tr:nth-child(16) {
+      background-color: $table-color2;
+    }
+    tr:nth-child(4),
+    tr:nth-child(5),
+    tr:nth-child(7),
+    tr:nth-child(8),
+    tr:nth-child(9),
+    tr:nth-child(11),
+    tr:nth-child(12),
+    tr:nth-child(13) {
+      td:nth-child(2) {
+        background-color: $table-color2;
+      }
+      td:nth-child(3) {
+        background-color: $table-color3;
+      }
+    }
+    tr th {
+      background-color: $table-color1;
+    }
+    tr td:nth-child(2) {
+      // background-color: rgba(228,214,226,.2);
+    }
   }
 }
 
@@ -316,7 +452,7 @@ footer .container {
       h1, h2, h3 {
         font-size: 2em;
       }
-      h2 {
+      h2, h3 {
         font-size: 10vw;
         line-height: 1;
       }
@@ -344,15 +480,12 @@ footer .container {
     }
     .header {
       #scribble-party {
-        background: url(/assets/img/scribble.png) no-repeat;
-        background-size: 230px 100px;
-        display: block;
-        width: 230px;
-        height: 100px;
-        position: relative;
-        margin: -55px auto 0;
-        bottom: -55px;
-        right: -163px;
+        background-size: 40vw 17vw;
+        width: 40vw;
+        height: 17vw;
+        margin: -14vw auto 0;
+        bottom: -9vw;
+        right: -27vw;
       }
       span {
         line-height: 1.1;
@@ -363,10 +496,14 @@ footer .container {
           font-size: 7vw;
         }
       }
-      .white-divider {
-        width: 100%;
-        margin: 10px auto 6px;
-      }
+    }
+    .white-divider,
+    .white-divider-mid {
+      width: 100%;
+      margin: 10px auto 6px;
+    }
+    .hodlween-font {
+      font-size: 7vw;
     }
     a.orange-pill-btn {
       background-size: 163px 49px;
@@ -376,7 +513,11 @@ footer .container {
       margin: 12px auto 0;
       line-height: 1.8;
     }
-    .highlight-section, .highlight-section2 {
+    .highlight-section,
+    .highlight-section2,
+    .highlight-section3,
+    .highlight-section4,
+    .highlight-section5 {
       p {
         line-height: 1.6;
         width: 100%;
@@ -386,13 +527,19 @@ footer .container {
       padding: 13vw 0 3vw;
     }
     .highlight-section2 {
-      margin: 10vw auto 0;
+      padding: 8vw 0 20vw;
     }
     .highlight-section3 {
-      margin: 15vw auto 20vw
+      padding: 10vw 0 20vw
+    }
+    .highlight-section4 {
+      padding: 10vw 0;
+    }
+    .highlight-section5 {
+      padding: 20vw 0;
     }
     .ticket-price-increase { 
-      margin: 0 0 17vw;
+      // margin: 0 0 17vw;
       > span{
         font-size: 7vw;
       }
@@ -417,16 +564,16 @@ footer .container {
         margin: auto;
         margin: 0 17px 10px;
       }
-      h2, p, .buy-links {
+      h2, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
       }
     }
-    article:nth-child(odd) {
+    .col article:nth-child(odd) {
       float: none;
       img {
         // float: none;
       }
-      h2, p, .buy-links {
+      h2, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
       }
     }
