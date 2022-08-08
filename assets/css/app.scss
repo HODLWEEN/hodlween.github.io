@@ -275,6 +275,15 @@ a.orange-pill-btn {
   }
 }
 
+[data-component="slideshow"] .slide {
+  display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+}
+
 article {
   clear: both;
   padding: 0 0 170px;
@@ -593,20 +602,21 @@ footer .container {
           font-size: 6vw;
         }
         &.headline.party {
+          font-size: 9vw;
           span {
-            font-size: 6vw;
+            font-size: 8vw;
           }
         }
         &.headline2.party {
-          font-size: 6vw;
+          font-size: 7vw;
           span {
-            font-size: 7vw;
+            font-size: 9vw;
           }
         }
       }
       .headline-bg {
         width: 100%;
-        font-size: 4.5vw;
+        font-size: 6.5vw;
         padding: 2vw 0 3vw;
         span {
           padding: 0 1.5vw;
@@ -687,6 +697,9 @@ footer .container {
       div.color-image {
         width: 90%;
         margin: 0 17px 10px;
+      }
+      &.no-padd {
+        padding: 0;
       }
       h2, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
