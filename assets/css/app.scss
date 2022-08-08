@@ -151,7 +151,8 @@ a:hover {
       }
     }
   }
-  .headline-bg {
+  .headline-bg,
+  .headline-bg-mobile {
     font: $hodlween;
     color: $purple-light;
     background: rgb(17,5,29);
@@ -163,10 +164,13 @@ a:hover {
     padding: 10px 0 15px;
     span {
       top: -6px;
-      padding: 0 15px;
+      padding: 0 5px 0 15px;
       position: relative;
     }
     font-size: 40px;
+  }
+  .headline-bg-mobile {
+    display: none;
   }
 }
 
@@ -615,6 +619,10 @@ footer .container {
         }
       }
       .headline-bg {
+        display: none;
+      }
+      .headline-bg-mobile {
+        display: block;
         width: 100%;
         font-size: 6.5vw;
         padding: 2vw 0 3vw;
