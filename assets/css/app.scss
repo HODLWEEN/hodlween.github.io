@@ -20,6 +20,7 @@ $dark: #11051d; //bg
 $dark2: #0a0311; //footer
 $purple: #230444; //gradient
 $orange: #eb7e6f; //links
+$purple-light: #a78fa4;
 
 $table-color1: #1d1027;
 $table-color2: #22122e;
@@ -95,6 +96,9 @@ a:hover {
   height: 200px;
   display: block;
   margin: 207px auto 180px;
+  &.party-padding {
+    margin-bottom: 115px;
+  }
 }
 .header {
   text-align: center;
@@ -126,12 +130,43 @@ a:hover {
     line-height: 1.1;
     &.headline {
       color: $light;
-      font-size: 55px;
+      font-size: 56px;
     }
     &.headline2 {
       color: $light2;
       font-size: 40px;
     }
+    &.headline.party {
+      line-height: 0.8;
+      span {
+        font-size: 49px;
+      }
+    }
+    &.headline2.party {
+      color: $light3;
+      font-size: 37px;
+      line-height: 0.8;
+      span {
+        font-size: 46px;
+      }
+    }
+  }
+  .headline-bg {
+    font: $hodlween;
+    color: $purple-light;
+    background: rgb(17,5,29);
+    background: linear-gradient(90deg, rgb(17,5,29,0) 0%, rgb(17,5,29,1) 50%, rgb(17,5,29,0) 100%);
+    width: 850px;
+    mix-blend-mode: screen;
+    margin: auto;
+    font-size: 42px;
+    padding: 10px 0 15px;
+    span {
+      top: -6px;
+      padding: 0 15px;
+      position: relative;
+    }
+    font-size: 40px;
   }
 }
 
@@ -142,6 +177,15 @@ a:hover {
   display: block;
   width: 850px;
   margin: 20px auto 10px;
+  &.with-bg {
+    margin: 0 auto;
+  }
+  &.top {
+    margin-top: 20px;
+  }
+  &.bottom {
+    margin-bottom: 10px;
+  }
 }
 main .white-divider-mid {
   margin-bottom: 30px;
@@ -171,7 +215,7 @@ a.orange-pill-btn {
 .highlight-section5 {
   p {
     line-height: 2;
-    width: 650px;
+    width: 655px;
     margin: auto;
   }
 }
@@ -235,14 +279,31 @@ article {
   clear: both;
   padding: 0 0 170px;
   float: left;
-  img {
+  // div.color-image > a {
+  //   display: block;
+  //   width: 250px;
+  //   height: 250px;
+  //   overflow: hidden;
+  //   border-radius: 50%;
+  //   margin: auto;
+  //   background-color: #75447a;
+  //   &:hover img {
+  //     transition: all .3s;
+  //     opacity: .9;
+  //   }
+  // }
+  div.color-image {
     float: left;
     width: 550px;
-    display: inline-block;
     box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
     -webkit-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
     -moz-box-shadow: -15px 15px 0px 2px rgba(128,76,136,0.3);
     display: block;
+    background-color: #75447a;
+    img {
+      opacity: .8;
+      width: 100%;
+    }
   }
   h2, p, .buy-links, .details, .white-divider {
     text-align: left;
@@ -276,6 +337,9 @@ article {
     color: $light2;
     margin: 20px 0;
     display: block;
+    i {
+      font-size: .75em;
+    }
   }
   .buy-links {
     list-style: none;
@@ -290,7 +354,7 @@ article {
   }
 }
 article:nth-of-type(even) {
-  img {
+  div.color-image {
     float: right;
     box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
     -webkit-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
@@ -317,7 +381,7 @@ article:nth-of-type(even) {
 }
 article.center {
   float:none;
-  img {
+  div.color-image {
     float: none;
     margin: auto;
     margin-bottom: 50px;
