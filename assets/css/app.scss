@@ -279,19 +279,6 @@ article {
   clear: both;
   padding: 0 0 170px;
   float: left;
-  // div.color-image > a {
-  //   display: block;
-  //   width: 250px;
-  //   height: 250px;
-  //   overflow: hidden;
-  //   border-radius: 50%;
-  //   margin: auto;
-  //   background-color: #75447a;
-  //   &:hover img {
-  //     transition: all .3s;
-  //     opacity: .9;
-  //   }
-  // }
   div.color-image {
     float: left;
     width: 550px;
@@ -576,6 +563,9 @@ footer .container {
       width: 100%;
       height: 28vw;
       margin: 29vw auto 21vw;
+      &.party-padding {
+        margin-bottom: 16vw;
+      }
     }
     .header {
       #scribble-party {
@@ -602,12 +592,39 @@ footer .container {
         &.headline2 {
           font-size: 6vw;
         }
+        &.headline.party {
+          span {
+            font-size: 6vw;
+          }
+        }
+        &.headline2.party {
+          font-size: 6vw;
+          span {
+            font-size: 7vw;
+          }
+        }
+      }
+      .headline-bg {
+        width: 100%;
+        font-size: 4.5vw;
+        padding: 2vw 0 3vw;
+        span {
+          padding: 0 1.5vw;
+          top: -0.2vw;
+          font-size: 3vw;
+        }
       }
     }
     .white-divider,
     .white-divider-mid {
       width: 100%;
       margin: 10px auto 6px;
+      &.top {
+        margin-top: 3vw;
+      }
+      &.bottom {
+        margin-bottom: 1.5vw;
+      }
     }
     .hodlween-font {
       font-size: 7vw;
@@ -663,12 +680,12 @@ footer .container {
         }
       }
     }
+
     article {
       padding: 0 0 70px;
       float: none;
-      img {
+      div.color-image {
         width: 90%;
-        margin: auto;
         margin: 0 17px 10px;
       }
       h2, p, .buy-links, .details, .white-divider {
@@ -677,9 +694,6 @@ footer .container {
     }
     article:nth-of-type(even) {
       float: none;
-      img {
-        // float: none;
-      }
       h2, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
       }
