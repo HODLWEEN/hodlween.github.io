@@ -3,9 +3,44 @@ require('../css/app.scss');
 require('jquery')
 require('bootstrap')
 
+// Redirects for qr codes and links so we can track marketing.
+var pathname = window.location.pathname; // Returns path only (/path/example.html)
+window.onload = function() {
+	pathname === '/CLT' ? window.location.href = '/clt' : ''; // Redirect 
+}
 
+var tickers = document.querySelectorAll('[data-component="ticker"]');
+tickers.forEach(initTicker);
+	
+function initTicker(ticker) {
+	
 	// Set the date we're counting down to
-	var countDownDate = new Date("Aug 22, 2022 00:00:00").getTime();
+	var now = new Date().getTime();
+	var countDownDate1 = new Date("Aug 22, 2022 00:00:00").getTime();
+	var countDownDate2 = new Date("Sep 5, 2022 00:00:00").getTime();
+	var countDownDate3 = new Date("Oct 3, 2022 00:00:00").getTime();
+	var countDownDate4 = new Date("Oct 17, 2022 00:00:00").getTime();
+	if (now < countDownDate1) {
+		var countDownDate = countDownDate1;
+		// const ticketprices = new Array({fullhodl:"$150.21", meatmeal:"$40.21", conf:"$100.21", party:"$60.21", partyvip:"$90.21"});
+	}else if (now < countDownDate2) {
+		var countDownDate = countDownDate2;
+		// ticketprices = new Array({fullhodl:"$170.21", meatmeal:"$50.21", conf:"$120.21", party:"$80.21", partyvip:"$110.21"});
+	}else if (now < countDownDate3) {
+		var countDownDate = countDownDate3;
+		// ticketprices = new Array({fullhodl:"$200.21", meatmeal:"$60.21", conf:"$150.21", party:"$100.21", partyvip:"$130.21"});
+	}else if (now < countDownDate4) {
+		var countDownDate = countDownDate4;
+		// ticketprices = new Array({fullhodl:"$240.21", meatmeal:"$70.21", conf:"$180.21", party:"$120.21", partyvip:"$160.21"});
+	}else {
+		var countDownDate = countDownDate4;
+		// ticketprices = new Array({fullhodl:"$290.21", meatmeal:"$80.21", conf:"$200.21", party:"$150.21", partyvip:"$190.21"});
+	}
+	// document.getElementById("fullhodl-price").innerHTML = ticketprices[1];
+	// document.getElementById("meatmeal-price").innerHTML = ticketprices.meatmeal;
+	// document.getElementById("conf-price").innerHTML = ticketprices.conf;
+	// document.getElementById("party-price").innerHTML = ticketprices.party;
+	// document.getElementById("partyvip-price").innerHTML = ticketprices.partyvip;
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
@@ -39,26 +74,25 @@ require('bootstrap')
 	  "<div><span>" + 0 + "</span><span>seconds</span>" + "</div>";
 	  }
 	}, 1000);
+}
 
+var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+slideshows.forEach(initSlideShow);
 
-	
-	var slideshows = document.querySelectorAll('[data-component="slideshow"]');
-	slideshows.forEach(initSlideShow);
+function initSlideShow(slideshow) {
 
-	function initSlideShow(slideshow) {
+	var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
 
-		var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
+	var index = 0, time = 5000;
+	slides[index].classList.add('active');
 
-		var index = 0, time = 5000;
+	setInterval( () => {
+		slides[index].classList.remove('active');
+		
+		index++;
+		if (index === slides.length) index = 0;
+
 		slides[index].classList.add('active');
 
-		setInterval( () => {
-			slides[index].classList.remove('active');
-			
-			index++;
-			if (index === slides.length) index = 0;
-
-			slides[index].classList.add('active');
-
-		}, time);
-	}
+	}, time);
+}
