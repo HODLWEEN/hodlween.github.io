@@ -252,9 +252,9 @@ a.orange-pill-btn {
     p {
       margin: 0;
       width: auto;
-      font-size: 1.4em;
+      font-size: 23px;
       line-height: 1.5;
-      text-align: justify;
+      // text-align: justify;
       text-align-last: center;
     }
   }
@@ -386,7 +386,7 @@ article {
     color: $light;
   }
   p {
-    line-height: 1.8;
+    line-height: 1.5;
     font-size: 21px;
   }
   .price {
@@ -481,7 +481,7 @@ article.sponsor:nth-of-type(even) {
   }
   p {
     text-align: justify;
-    text-align-last: right;
+    text-align-last: left;
   }
 }
 
