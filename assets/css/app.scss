@@ -554,7 +554,7 @@ article.center {
     }
   }
   tbody {
-    tr:nth-child(1), tr:nth-child(6), tr:nth-child(10), tr:nth-child(14) {
+    tr:nth-child(1), tr:nth-child(6), tr:nth-child(9), tr:nth-child(14) {
       background-color: $table-color1;
     }
     tr:nth-child(2), tr:nth-child(3), tr:nth-child(15), tr:nth-child(16) {
@@ -564,9 +564,8 @@ article.center {
     tr:nth-child(5),
     tr:nth-child(7),
     tr:nth-child(8),
-    tr:nth-child(9),
+    tr:nth-child(10),
     tr:nth-child(11),
-    tr:nth-child(12),
     tr:nth-child(13) {
       td:nth-child(2) {
         background-color: $table-color2;
@@ -574,6 +573,9 @@ article.center {
       td:nth-child(3) {
         background-color: $table-color3;
       }
+    }
+    tr:nth-child(12) td:nth-child(2) {
+      background-color: $table-color3;
     }
     tr th {
       background-color: $table-color1;
