@@ -544,6 +544,9 @@ article.center {
   th, td {
     vertical-align: middle;
   }
+  .commit {
+      color: $light;
+    }
   thead {
     font: $hodlween;
     font-size: 36px;
@@ -999,8 +1002,8 @@ footer .container {
     }
     .table {
       thead {
-        font: $sans-serif;
-        font-size: inherit;
+        // font: $sans-serif;
+        font-size: 5vw;
       }
     }
     .faq-accordian .card .card-header{
