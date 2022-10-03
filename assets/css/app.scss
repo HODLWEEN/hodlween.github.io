@@ -532,6 +532,25 @@ article.center {
   }
 }
 
+.sponsors {
+  .col {
+    padding: 2em 0;
+  }
+  div > a {
+    display: block;
+    width: 300px;
+    // height: 250px;
+    margin: auto;
+    &:hover img {
+      transition: all .3s;
+      opacity: .8;
+    }
+  }
+  img {
+    width: 100%;
+    opacity: 1;
+  }
+}
 
 .table {
   border-collapse: separate;
