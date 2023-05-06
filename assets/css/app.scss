@@ -9,13 +9,8 @@
    font-family: "Blood Crow C";
    src: url('/assets/fonts/bloodcrowc.ttf');
 }
-// @font-face {
-//    font-family: "Font Awesome Brands";
-//    src: url('/assets/fonts/Font-Awesome-5-Brands-Regular-400.otf');
-// }
 $hodlween: 400 1rem 'Blood Crow C', Arial, Helvetica, sans-serif;
 $sans-serif: 100 1rem Helvetica, Arial, sans-serif;
-// $fontawesomeb: 400 1rem 'Font Awesome Brands', Arial, Helvetica, sans-serif;
 
 $light: #e4d6e2;
 $light2: #d7c9d4;
@@ -76,6 +71,11 @@ body.special-event {
     text-align: center;
     font-size: 1.15em;
   }
+}
+
+.alert-top-of-page {
+  margin: 10px 10px 10px;
+  text-align: center;
 }
 a {
   color: $orange;
@@ -630,7 +630,26 @@ article.center {
     }
   }
 }
-
+.pleb-army {
+  text-align: center;
+  a{
+    display: inline-block;
+    text-decoration: none;
+    img{
+      margin: 20px 11px 5px;
+      display: block;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      transition: .15s all;
+    }
+    &:hover{
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
 #rabbit {
   fill: $light;
   display: inline-block;
