@@ -3,7 +3,9 @@
     <title><![CDATA[HODLWEEN 2022]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2022-10-17T00:36:32+00:00</updated>
+    <updated>
+Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Projects/Bitcoin Charlotte/website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
+2023-05-06T00:07:06+00:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
     </feed>
