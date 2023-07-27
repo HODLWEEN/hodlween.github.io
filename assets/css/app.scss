@@ -633,13 +633,14 @@ article.center {
     }
   }
 }
+
 .pleb-army {
   text-align: center;
   a{
     display: inline-block;
     text-decoration: none;
     img{
-      margin: 20px 11px 5px;
+      margin: 20px 20px 5px;
       display: block;
       width: 64px;
       height: 64px;
@@ -698,6 +699,7 @@ a#follow-us {
         z-index: 1;
         margin-bottom: 1.5rem;
         background-color: $table-color4;
+        text-align: left;
         &:last-child {
             margin-bottom: 0;
         }

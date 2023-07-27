@@ -9748,7 +9748,7 @@ article.center h2, article.center p, article.center .buy-links, article.center .
   text-decoration: none;
 }
 .pleb-army a img {
-  margin: 20px 11px 5px;
+  margin: 20px 20px 5px;
   display: block;
   width: 64px;
   height: 64px;
@@ -9806,6 +9806,7 @@ a#follow-us:hover #rabbit {
   z-index: 1;
   margin-bottom: 1.5rem;
   background-color: #1d1027;
+  text-align: left;
 }
 .faq-accordian .card:last-child {
   margin-bottom: 0;
