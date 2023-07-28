@@ -493,6 +493,23 @@ article.sponsor:nth-of-type(even) {
   }
 }
 
+.sponsor-2023 {
+
+  .sponsor-icon-2023 {
+    width: 200px;
+    border-radius: 1000px;
+    padding: 30px;
+    margin: 0 auto -30px;
+    box-shadow: -15px 15px 30px 0px rgba(128,76,136,0.3);
+    -webkit-box-shadow: -15px 15px 30px 0px rgba(128,76,136,0.3);
+    -moz-box-shadow: -15px 15px 30px 0px rgba(128,76,136,0.3);
+    background-color: transparent;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 article.center {
   float:none;
   div.color-image {
