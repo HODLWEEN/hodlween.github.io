@@ -9905,7 +9905,7 @@ footer .footer-nav small a {
 }
 
 .marquee-container {
-  height: 30vw;
+  height: 40vw;
   max-height: 306px;
   margin: 30px 0 -72px;
   position: relative;
@@ -9922,11 +9922,11 @@ footer .footer-nav small a {
   animation: bannermove 180s linear infinite;
 }
 .marquee-container .marquee img {
-  width: 45vw;
+  width: 60vw;
   max-width: 450px;
 }
 .marquee-container .marquee img.hoz {
-  width: 21.5vw;
+  width: 28.7vw;
   max-width: 216px;
 }
 .marquee-container .marquee a {
