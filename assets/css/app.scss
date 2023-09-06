@@ -640,6 +640,7 @@ article.center {
 .table-dark.table-hover tbody tr:hover {
   background-color: $table-color1;
 }
+
 .table.basic {
   tbody {
     tr th {
@@ -799,6 +800,9 @@ footer {
   overflow: hidden;
   max-width: 70%;
   margin: auto;
+  &.full-width {
+    max-width: 100%;
+  }
   iframe {
     position: absolute;
     top: 0;
