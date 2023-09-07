@@ -9234,9 +9234,14 @@ span.orange {
   border-bottom-right-radius: 10px;
 }
 .navbar-dark .navbar-toggler {
-  padding: 5px 12px 6px;
+  padding: 5px 12px 10px;
   margin: 9px 19px;
   background-color: rgba(17, 5, 29, 0.5);
+  color: rgb(255, 255, 255);
+}
+.navbar-dark .navbar-toggler .menu-text span:after {
+  content: "MENU";
+  font-size: 0.88rem;
 }
 
 #wrapper {

@@ -108,9 +108,16 @@ span.orange {
     border-bottom-right-radius: 10px;
   }
   .navbar-toggler {
-    padding: 5px 12px 6px;
+    padding: 5px 12px 10px;
     margin: 9px 19px;
     background-color: rgba(17,5,29,.5);
+    color: rgba(255,255,255,1);
+    .menu-text {
+      span:after {
+        content: "MENU";
+        font-size: .88rem;
+      }
+    }
   }
 }
 #wrapper {
