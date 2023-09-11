@@ -4,7 +4,7 @@
     <loc></loc>
     <lastmod>
 Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Projects/Bitcoin Charlotte/website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
-2023-09-07</lastmod>
+2023-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>

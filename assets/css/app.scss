@@ -71,6 +71,30 @@ body.special-event {
     text-align: center;
     font-size: 1.15em;
   }
+
+  #wrapper {
+    background: url(/assets/img/hdr-bg.jpg) no-repeat top center;
+    background-size: 1728px 1488px;
+    min-height:1488px;
+  }
+
+  &#home {
+    #wrapper {
+
+    }
+  }
+  &#subpage {
+    background-position-y: -190px;
+    #wrapper {
+      background-position-y: -190px;
+      .header {
+        display: none;
+      }
+      #hodlween-logo {
+        margin: 17px auto 15px !important;
+      }
+    }
+  }
 }
 
 .alert-top-of-page {
@@ -120,11 +144,7 @@ span.orange {
     }
   }
 }
-#wrapper {
-  background: url(/assets/img/hdr-bg.jpg) no-repeat top center;
-  background-size: 1728px 1488px;
-  min-height:1488px;
-}
+
 #hodlween-logo {
   width: 680px;
   height: 200px;
@@ -134,6 +154,7 @@ span.orange {
     margin-bottom: 115px;
   }
 }
+
 .header {
   text-align: center;
   margin: auto;
@@ -374,12 +395,12 @@ article {
       width: 100%;
     }
   }
-  h3, h2, p, .buy-links, .details, .white-divider {
+  h3, h2, h6, p, .buy-links, .details, .white-divider {
     text-align: left;
     padding-left: 600px;
   }
   p {
-    text-align: justify;
+    // text-align: justify;
   }
   .white-divider div{
     background: rgb(228,214,226);
@@ -397,7 +418,7 @@ article {
       display: inline-block;
     }
   }
-  h2 {
+  h2, h6 {
     color: $light;
   }
   p {
@@ -434,13 +455,13 @@ article:nth-of-type(even) {
     -webkit-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
     -moz-box-shadow: 15px 15px 0px 2px rgba(128,76,136,0.3);
   }
-  h3, h2, p, .buy-links, .details, .white-divider {
+  h3, h2, h6, p, .buy-links, .details, .white-divider {
     text-align: right;
     padding-right: 600px;
     padding-left: 0px;
   }
   p {
-    text-align: justify;
+    // text-align: justify;
     text-align-last: right;
   }
   .white-divider div{
@@ -477,7 +498,7 @@ article.sponsor {
     padding-left: 280px;
   }
   p {
-    text-align: justify;
+    // text-align: justify;
   }
 }
 article:nth-of-type(even) {
@@ -495,7 +516,7 @@ article.sponsor:nth-of-type(even) {
     text-align: left;
   }
   p {
-    text-align: justify;
+    // text-align: justify;
     text-align-last: left;
   }
 }
@@ -745,9 +766,9 @@ a#follow-us {
                 -ms-flex-align: center;
                 -ms-grid-row-align: center;
                 align-items: center;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
+                // -webkit-box-pack: justify;
+                // -ms-flex-pack: justify;
+                // justify-content: space-between;
                 span {
                     font-size: 1.5rem;
                 }
@@ -909,6 +930,12 @@ footer .container {
         font-size: 10vw;
         line-height: 1;
       }
+      h6 {
+        font: $hodlween;
+        color: $light;
+        padding: 4vw;
+        font-size: 6vw;
+      }
       .header {
           margin: 0 auto;
         img {
@@ -921,17 +948,29 @@ footer .container {
         margin: 0 auto 150px;
         font-size: 1em;
       }
-    }
-
-    #wrapper {
-      background-size: 240% auto;
-    }
-    #hodlween-logo {
-      width: 100%;
-      height: 28vw;
-      margin: 29vw auto 21vw;
-      &.party-padding {
-        margin-bottom: 16vw;
+      &#home #wrapper,
+      &#subpage #wrapper {
+        #hodlween-logo {
+          width: 100%;
+          height: 27vw;
+          &.party-padding {
+            margin-bottom: 16vw;
+          }
+        }
+      }
+      &#home #wrapper {
+        background-size: 240% auto;
+        background-position-y: 0px;
+        #hodlween-logo {
+          margin: 29vw auto 15vw !important;
+        }
+      }
+      &#subpage #wrapper {
+        background-size: 240% auto;
+        background-position-y: -74px;
+        #hodlween-logo {
+          margin: 10vw auto 0vw !important;
+        }
       }
     }
     .header {
@@ -1070,12 +1109,12 @@ footer .container {
       &.no-padd {
         padding: 0;
       }
-      h2, p, .buy-links, .details, .white-divider {
+      h2, h6, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
       }
       p {
-        line-height: 1.4;
-        font-size: 4.5vw;
+        line-height: 1.5;
+        font-size: 1em;
       }
       .white-divider div {
         margin: 10px 0;
@@ -1083,7 +1122,7 @@ footer .container {
     }
     article:nth-of-type(even) {
       float: none;
-      h2, p, .buy-links, .details, .white-divider {
+      h2, h6, p, .buy-links, .details, .white-divider {
         padding: 0 15px;
       }
     }
@@ -1105,7 +1144,7 @@ footer .container {
         text-align: center;
       }
       p {
-        text-align: justify;
+        // text-align: justify;
         text-align-last: center;
       }
       h3{
@@ -1126,7 +1165,7 @@ footer .container {
         text-align: center;
       }
       p {
-        text-align: justify;
+        // text-align: justify;
         text-align-last: center;
       }
     }
