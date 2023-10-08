@@ -32,11 +32,12 @@ $table-color5: #22122e;
 html {
   scroll-behavior: smooth;
 }
+
 body.special-event {
   background: #11051d url(/assets/img/repeat-bg.jpg) repeat-x top center;
   background-size: 10px 1488px;
   color: $light3;
-  h1, h2, h3 {
+  h1, h2, h3, h6 {
     font: $hodlween;
     font-size: 2em;
     color: $light;
@@ -54,7 +55,7 @@ body.special-event {
       margin: 0 24px;
     }
   }
-  h3 {
+  h3, h6 {
     font-size: 3em;
   }
   .header {
@@ -933,7 +934,6 @@ footer .container {
       h6 {
         font: $hodlween;
         color: $light;
-        padding: 4vw;
         font-size: 6vw;
       }
       .header {
@@ -1060,8 +1060,8 @@ footer .container {
       .headline-bg-alt {
         width: 96%;
         p {
-          font-size: 5vw;
-          line-height: 1.3;
+          font-size: 1em;
+          line-height: 1.5;
         }
       }
     }
