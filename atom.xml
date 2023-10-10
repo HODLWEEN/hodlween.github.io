@@ -5,7 +5,7 @@
     <link href="/"/>
     <updated>
 Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Projects/Bitcoin Charlotte/website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
-2023-10-10T12:57:20+00:00</updated>
+2023-10-10T13:08:03+00:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
     </feed>
