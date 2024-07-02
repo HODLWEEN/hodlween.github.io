@@ -72,7 +72,6 @@ body.special-event {
     text-align: center;
     font-size: 1.15em;
   }
-
   #wrapper {
     background: url(/assets/img/hdr-bg.jpg) no-repeat top center;
     background-size: 1728px 1488px;
@@ -269,6 +268,12 @@ a.orange-pill-btn {
     color: $dark;
   }
 }
+a.under-orange-pill-btn {
+    margin: -10px 0 0;
+    display: block;
+    line-height: 0;
+    font-size: .88em;
+  }
 
 .highlight-section,
 .highlight-section2,
@@ -844,7 +849,7 @@ footer {
 .marquee-container {
   height:40vw;
   max-height: 306px;
-  margin: 30px 0 -72px;
+  margin: 60px 0 -72px;
   position:relative; 
   overflow:hidden;
   -webkit-mask-image: -webkit-gradient(linear, left center, right center, 
