@@ -3,8 +3,8 @@
   <url>
     <loc></loc>
     <lastmod>
-Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Library/CloudStorage/ProtonDrive-jake@tothemoon.farm-folder/Projects/Bitcoin Charlotte/website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
-2024-10-29</lastmod>
+Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Documents/hodlween website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
+2025-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
