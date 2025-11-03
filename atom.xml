@@ -4,13 +4,8 @@
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
     <updated>
-<<<<<<< HEAD
 Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Documents/hodlween website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
 2025-11-03T21:32:27+00:00</updated>
-=======
-Deprecated: DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in /Users/jacobparrish/Library/CloudStorage/ProtonDrive-jake@tothemoon.farm-folder/Projects/Bitcoin Charlotte/website/hodlween-sculpin/vendor/twig/twig/src/Extension/CoreExtension.php on line 522
-2025-08-26T18:51:22+00:00</updated>
->>>>>>> 4d63eac7210b3f43472f16bf26e632a003514f0e
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
     </feed>
